@@ -1,0 +1,28 @@
+<p>
+  pokemon works!
+</p>
+
+<h2>Find your pokemon!</h2>
+
+<label>select the first date</label>
+<input [(ngModel)]="date1" type="date">
+
+<label>select the second date</label>
+<input [(ngModel)]="date2 "type="date">
+<button (click)="findPokemon(date , date)">Show Pokemon</button>
+
+<div  *ngIf="found" >
+  <p>the pokemon you searched:</p>
+
+  <u >
+    <li *ngFor="let pokemon of foundPokemon">
+      <span>{{ pokemon.datum_vaststelling }}</span>
+      <span>{{ pokemon.opnameplaats_straat }}</span>
+      <span>{{ pokemon.aantal_overtredingen_snelheid }}</span>
+      <span>{{ pokemon.aantal_overtredingen_roodlicht }}</span>
+
+    </li>
+  </u>
+
+</div>
+<p class="tiny">please let me pass... </p>
