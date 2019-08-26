@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <title>Inhaalexamens</title>
+  <link rel='stylesheet' href='css/bootstrap.min.css'>
+</head>
+<body>
+    <h1>Mataganov Vladislav</h1>
+  <h1>Alle inhaalexamens</h1>
+ <br/><br/>
+  <ul class='inhaalexamen'>
+    <ul>
+      <% for(var i=0; i < overtredingen.length; i++) {%>
+          <li>
+              <span><b>datum_vaststelling : </b><%= overtredingen[i].datum_vaststelling %></span><br />
+              <span><b>opnameplaats_straat : </b><%= overtredingen[i].opnameplaats_straat %></span><br />
+              <span><b>aantal_overtredingen_snelheid : </b><%= overtredingen[i].aantal_overtredingen_snelheid %></span><br />
+              <span><b>aantal_overtredingen_roodlicht : </b><%= overtredingen[i].aantal_overtredingen_roodlicht %></span><br />
+          </li>
+          <br><br>
+      <% } %>
+  </ul>
+<br />
+
+<a href='/'>Add inhaalexamen</a>&nbsp;
+
+</body>
+</html>
